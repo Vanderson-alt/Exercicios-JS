@@ -8,7 +8,58 @@
 <body>
     <h1>Logica de Programação comJavaScript</h1>
 
-    <script>
-    </script>
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="mutiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+
+    <div id="output"></div>
+
+   <script>
+
+        var n1 = prompt("digite um numero")
+        n1 = parseFloat(n1)
+
+        escreve();
+
+        function escreve(){
+            var output = document.querySelector("#output")
+            output.innerHTML = n1;
+        }
+
+        function somar(){
+            var n = prompt("digite outro numero")
+            n = parseFloat(n)
+
+            n1 = n1 + n;
+            escreve();
+        }
+
+        function subtrair(){
+            var n = prompt("digite outro numero")
+            n = parseFloat(n)
+
+            n1 = n1 - n;
+            escreve();
+        }
+
+        function mutiplicar(){
+            var n = prompt("digite outro numero")
+            n = parseFloat(n)
+
+            n1 = n1 * n;
+            escreve();
+        }
+
+        function dividir(){
+            var n = prompt("digite outro numero")
+            n = parseFloat(n)
+
+            n1 = n1 / n;
+            escreve();
+        }
+
+
+   </script>
 </body>
 </html> 
