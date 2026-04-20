@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação JavaScript</title>
+</head>
+<body>
+    <h1>Logica de Programação com JavaScript</h1>
+
+    <button onclick="calcularArea()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+
+    <div id="output"></div>
+
+
+ <script>
+
+    var n1 = prompt('digite a altura');
+    n1 = parseFloat(n1)
+
+    var n2 = prompt('digite a largura');
+    n2 = parseFloat(n2)
+
+
+    try {
+        if( isNaN(n1) || isNaN(n2) ){
+            throw new Error('digite um numero valido');
+        } else (n1 < 0 || n2 < 0) 
+            throw new Error('digite um numero positivo');
+
+    } catch (e){
+            console.log(e.message)
+            
+        }
+
+    var output = document.querySelector('#output');
+    output.innerHTML = 'Altura: ' + n1 + '<br>Largura: ' + n2;
+
+    function calcularArea(){
+        var area = n1 * n2;
+        output.innerHTML = 'Area total: ' + area;
+
+    }
+
+    function limpar(){
+        n1 = 0;
+        n2 = 0;
+        output.innerHTML = '';
+    }
+
+
+
+ </script>
+
+</body>
+</html> 
